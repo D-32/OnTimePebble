@@ -1,0 +1,18 @@
+{
+  "uuid": "506969a2-87f3-4e84-9100-bacaa6f6d237",
+  "shortName": "PebbleSBB",
+  "longName": "PebbleSBB",
+  "companyName": "Dylan Marriott",
+  "capabilities": [ "location" ],
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}

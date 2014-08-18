@@ -1,0 +1,8 @@
+argv = ['/Users/d-32/pebble-dev/PebbleSDK-2.4.1/Pebble/waf', 'configure', 'build']
+environ = {'TERM_SESSION_ID': 'A2AC2870-B9FE-4315-8CC1-EF900F719771', 'SSH_AUTH_SOCK': '/tmp/launch-vhJVLB/Listeners', 'PYTHONPATH': '/Users/d-32/pebble-dev/PebbleSDK-current/bin/../.env/lib/python2.7/site-packages', 'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'LC_CTYPE': 'UTF-8', 'TERM_PROGRAM_VERSION': '326', 'SHELL': '/bin/bash', 'LOGNAME': 'd-32', 'USER': 'd-32', 'HOME': '/Users/d-32', 'PATH': '/Users/d-32/pebble-dev/PebbleSDK-2.4.1/arm-cs-tools/bin:/Users/d-32/pebble-dev/PebbleSDK-current/bin:/Users/d-32/google-cloud-sdk/bin:/usr/local/bin:/Users/d-32/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin', 'TMPDIR': '/var/folders/h5/_5385qgd2xqcg6k3sy5z6vm00000gn/T/', 'TERM_PROGRAM': 'Apple_Terminal', 'TERM': 'xterm-256color', 'Apple_PubSub_Socket_Render': '/tmp/launch-6AfErV/Render', 'VERSIONER_PYTHON_VERSION': '2.7', 'SHLVL': '2', '__CF_USER_TEXT_ENCODING': '0x1F5:0:0', 'PWD': '/Users/d-32/Documents/git/PebbleSBB/PebbleSBB', '_': '/Users/d-32/pebble-dev/PebbleSDK-2.4.1/Pebble/waf', '__CHECKFIX1436934': '1'}
+files = ['/Users/d-32/Documents/git/PebbleSBB/PebbleSBB/wscript']
+hash = 4672844372416070989
+options = {'files': '', 'jobs': 4, 'verbose': 0, 'nocache': False, 'progress_bar': 0, 'timestamp': None, 'distcheck_args': None, 'top': '', 'destdir': '', 'keep': 0, 'zones': '', 'debug': False, 'prefix': '/usr/local/', 'download': False, 'force': False, 'targets': '', 'out': ''}
+out_dir = '/Users/d-32/Documents/git/PebbleSBB/PebbleSBB/build'
+run_dir = '/Users/d-32/Documents/git/PebbleSBB/PebbleSBB'
+top_dir = '/Users/d-32/Documents/git/PebbleSBB/PebbleSBB'
