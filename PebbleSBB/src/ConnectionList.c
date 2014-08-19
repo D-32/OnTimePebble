@@ -35,7 +35,7 @@ void menu_layer_draw_row(GContext *ctx, const Layer *cell_layer, MenuIndex *cell
 }
 
 int16_t menu_layer_get_cell_height(struct MenuLayer *menu_layer, MenuIndex *cell_index, void *callback_context) {
-	return 48;
+	return 38;
 }
 
 uint16_t menu_layer_get_num_rows_in_section(struct MenuLayer *menu_layer, uint16_t section_index, void *callback_context) {
