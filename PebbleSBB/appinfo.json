@@ -16,6 +16,12 @@
     "media": [
     {
 		"type": "png",
+		"name": "IMAGE_ICON",
+		"file": "img/icon.png",
+		"menuIcon": true
+	},
+    {
+		"type": "png",
 		"name": "IMAGE_BUS",
 		"file": "img/bus.png"
 	},
