@@ -78,29 +78,38 @@ function getConnectionDetail(index) {
 	var icon = 0;
 	switch (connection.categoryCode) {
 		case 1:
+			icon = 3;
 			break;
 		case 2:
+			icon = 3;
 			break;
 		case 3:
+			icon = 3;
 			break;
 		case 4:
+			icon = 2;
 			break;
 		case 5:
+			icon = 3;
 			break;
 		case 6:
+			icon = 0;
 			break;
 		case 7:
+			icon = 1;
 			break;
 		case 8:
+			icon = 3;
 			break;
 		case 9:
+			icon = 4;
 			break;
 	}
 	hashtable[0] = icon;
 	
 	var p = connection.stop.platform;
 	if (p == "") {
-		p = "X"
+		p = "?"
 	}
 	hashtable[1] = "Platform: " + p;
 	
@@ -109,6 +118,5 @@ function getConnectionDetail(index) {
 		d = "0";	
 	}
 	hashtable[2] = "Delay: " + d;
-	
 	Pebble.sendAppMessage(hashtable);
 }
