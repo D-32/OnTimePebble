@@ -25,11 +25,10 @@ static void sync_error_callback(DictionaryResult dict_error, AppMessageResult ap
 static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tuple, const Tuple* old_tuple, void* context) {
     switch (key) {
     	case 0x0:
-    		if (icon_bitmap) {
-				gbitmap_destroy(icon_bitmap);
+			if (new_tuple->value->uint8 < 5) { // why i'm getting 103 here I have no idea
+				icon_bitmap = gbitmap_create_with_resource(ICONS[new_tuple->value->uint8]);
+				bitmap_layer_set_bitmap(icon_layer, icon_bitmap);	
 			}
-			icon_bitmap = gbitmap_create_with_resource(ICONS[new_tuple->value->uint8]);
-			bitmap_layer_set_bitmap(icon_layer, icon_bitmap);
     		break;
     	case 0x1:
     		text_layer_set_text(platform_layer, new_tuple->value->cstring);
@@ -47,14 +46,14 @@ static void window_load(Window *window) {
     icon_layer = bitmap_layer_create(GRect(bounds.size.w / 2 - 40, 10, 80, 80));
 	layer_add_child(window_layer, bitmap_layer_get_layer(icon_layer));
     
-    platform_layer = text_layer_create(GRect(0, 80, bounds.size.w, 50));
+    platform_layer = text_layer_create(GRect(0, 95, bounds.size.w, 50));
 	text_layer_set_text_color(platform_layer, GColorBlack);
 	text_layer_set_background_color(platform_layer, GColorClear);
 	text_layer_set_font(platform_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
 	text_layer_set_text_alignment(platform_layer, GTextAlignmentCenter);
 	layer_add_child(window_layer, text_layer_get_layer(platform_layer));
 
-    delay_layer = text_layer_create(GRect(0, 110, bounds.size.w, 50));
+    delay_layer = text_layer_create(GRect(0, 115, bounds.size.w, 50));
 	text_layer_set_text_color(delay_layer, GColorBlack);
 	text_layer_set_background_color(delay_layer, GColorClear);
 	text_layer_set_font(delay_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
@@ -96,7 +95,7 @@ void showConnectionDetail(MenuIndex* index) {
     
     
     Tuplet initial_values[] = {
-        TupletInteger(0x0, (uint8_t) 0),
+        TupletInteger(0x0, (uint8_t) 999),
       	TupletCString(0x1, ""),
       	TupletCString(0x2, ""),
     };
