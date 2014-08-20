@@ -9,6 +9,8 @@ static uint8_t sync_buffer[640];
 static uint8_t count;
 static char rows[8][100];
 
+void showConnectionDetail(MenuIndex* index);
+
 static void sync_error_callback(DictionaryResult dict_error, AppMessageResult app_message_error, void *context) {
     APP_LOG(APP_LOG_LEVEL_DEBUG, "App Message Sync Error: %d", app_message_error);
 }
@@ -26,7 +28,7 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
 }
 
 void menu_layer_select_click(struct MenuLayer *menu_layer, MenuIndex *cell_index, void *callback_context) {
-
+	showConnectionDetail(cell_index);
 }
 
 void menu_layer_draw_row(GContext *ctx, const Layer *cell_layer, MenuIndex *cell_index, void *callback_context) { 
