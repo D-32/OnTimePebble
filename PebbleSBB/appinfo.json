@@ -5,7 +5,7 @@
   "companyName": "Dylan Marriott",
   "capabilities": [ "location" ],
   "versionCode": 1,
-  "versionLabel": "1.0.0",
+  "versionLabel": "1.0",
   "watchapp": {
     "watchface": false
   },
