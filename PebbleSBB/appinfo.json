@@ -13,6 +13,32 @@
     "dummy": 0
   },
   "resources": {
-    "media": []
+    "media": [
+    {
+		"type": "png",
+		"name": "IMAGE_BUS",
+		"file": "img/bus.png"
+	},
+    {
+		"type": "png",
+		"name": "IMAGE_CABLE",
+		"file": "img/cable.png"
+	},
+    {
+		"type": "png",
+		"name": "IMAGE_SHIP",
+		"file": "img/ship.png"
+	},
+    {
+		"type": "png",
+		"name": "IMAGE_TRAIN",
+		"file": "img/train.png"
+	},
+    {
+		"type": "png",
+		"name": "IMAGE_TRAM",
+		"file": "img/tram.png"
+	},
+    ]
   }
 }

@@ -3,9 +3,19 @@
 static Window* window;
 static TextLayer* platform_layer;
 static TextLayer* delay_layer;
+static BitmapLayer* icon_layer;
+static GBitmap* icon_bitmap = NULL;
 
 static AppSync sync;
 static uint8_t sync_buffer[640];
+
+static uint32_t ICONS[] = {
+	RESOURCE_ID_IMAGE_BUS,
+	RESOURCE_ID_IMAGE_CABLE,
+	RESOURCE_ID_IMAGE_SHIP,
+	RESOURCE_ID_IMAGE_TRAIN,
+	RESOURCE_ID_IMAGE_TRAM
+};
 
 
 static void sync_error_callback(DictionaryResult dict_error, AppMessageResult app_message_error, void *context) {
@@ -15,6 +25,11 @@ static void sync_error_callback(DictionaryResult dict_error, AppMessageResult ap
 static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tuple, const Tuple* old_tuple, void* context) {
     switch (key) {
     	case 0x0:
+    		if (icon_bitmap) {
+				gbitmap_destroy(icon_bitmap);
+			}
+			icon_bitmap = gbitmap_create_with_resource(ICONS[new_tuple->value->uint8]);
+			bitmap_layer_set_bitmap(icon_layer, icon_bitmap);
     		break;
     	case 0x1:
     		text_layer_set_text(platform_layer, new_tuple->value->cstring);
@@ -28,6 +43,9 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
 static void window_load(Window *window) {
     Layer* window_layer = window_get_root_layer(window);
     GRect bounds = layer_get_bounds(window_layer);
+    
+    icon_layer = bitmap_layer_create(GRect(bounds.size.w / 2 - 40, 10, 80, 80));
+	layer_add_child(window_layer, bitmap_layer_get_layer(icon_layer));
     
     platform_layer = text_layer_create(GRect(0, 80, bounds.size.w, 50));
 	text_layer_set_text_color(platform_layer, GColorBlack);
@@ -47,7 +65,10 @@ static void window_load(Window *window) {
 static void window_unload(Window *window) {
 	text_layer_destroy(platform_layer);
 	text_layer_destroy(delay_layer);
-	//bitmap_layer_destroy(icon_layer);
+	if (icon_bitmap) {
+		gbitmap_destroy(icon_bitmap);
+	}
+	bitmap_layer_destroy(icon_layer);
 }
 
 void showConnectionDetail(MenuIndex* index) {
