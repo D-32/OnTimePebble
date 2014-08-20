@@ -3,6 +3,7 @@
 static Window* window;
 static MenuLayer* menu_layer;
 
+static bool enableButton;
 static AppSync sync;
 static uint8_t sync_buffer[640];
 
@@ -21,6 +22,7 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
     } else {
 		const char* tmp = new_tuple->value->cstring;
 		if (strlen(tmp) > 1) {
+			enableButton = true;
 			strcpy(rows[key - 1], tmp); // this is hex, but as were only using 8 it's okay	
 		}
     }
@@ -28,7 +30,9 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
 }
 
 void stations_menu_select_click(struct MenuLayer *menu_layer, MenuIndex *cell_index, void *callback_context) {
-	showConnections(cell_index);
+	if (enableButton) {
+		showConnections(cell_index);	
+	}
 }
 
 void stations_menu_draw_row(GContext *ctx, const Layer *cell_layer, MenuIndex *cell_index, void *callback_context) { 
