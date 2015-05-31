@@ -1,11 +1,11 @@
 {
   "uuid": "506969a2-87f3-4e84-9100-bacaa6f6d237",
-  "shortName": "PebbleSBB",
-  "longName": "PebbleSBB",
+  "shortName": "SBB Watch",
+  "longName": "SBB Watch",
   "companyName": "Dylan Marriott",
   "capabilities": [ "location" ],
-  "versionCode": 1,
-  "versionLabel": "1.0",
+  "versionCode": 2,
+  "versionLabel": "1.1",
   "watchapp": {
     "watchface": false
   },
