@@ -25,7 +25,12 @@ function geoSuccess(loc) {
 
 function getStations(lat, long) {
   var req = new XMLHttpRequest();
-  var url = 'http://transport.opendata.ch/v1/locations?y='+long+'&x='+lat+'&type=station&type=station&fields[]=stations/id&fields[]=stations/name';
+  var url = 'http://transport.opendata.ch/v1/locations' +
+            '?y='+ long +
+            '&x='+ lat +
+            '&type=station' +
+            '&fields[]=stations/id' +
+            '&fields[]=stations/name';
   req.open('GET', url, true);
   req.onload = function(e) {
     if (req.readyState == 4 && req.status == 200) {
@@ -50,7 +55,12 @@ function getStations(lat, long) {
 
 function getConnections(index) {
   var req = new XMLHttpRequest();
-  var url = 'http://transport.opendata.ch/v1/stationboard?id='+_stations[index]+'&fields[]=stationboard/name&fields[]=stationboard/stop&fields[]=stationboard/to&limit=8';
+  var url = 'http://transport.opendata.ch/v1/stationboard' +
+            '?id='+ _stations[index] +
+            '&fields[]=stationboard/name' +
+            '&fields[]=stationboard/stop' +
+            '&fields[]=stationboard/to' +
+            '&limit=8';
   console.log(url);
   req.open('GET', url, true);
   req.onload = function(e) {
