@@ -1,3 +1,6 @@
+# Ignore waf lock file
+.lock-waf*
 
 # Ignore build generated files
 build
+
