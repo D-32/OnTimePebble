@@ -3,48 +3,54 @@
   "shortName": "SBB Watch",
   "longName": "SBB Watch",
   "companyName": "Dylan Marriott",
-  "capabilities": [ "location" ],
-  "versionCode": 2,
   "versionLabel": "1.1",
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ],
+  "sdkVersion": "3",
   "watchapp": {
     "watchface": false
   },
   "appKeys": {
     "dummy": 0
   },
+  "capabilities": [
+    "location"
+  ],
   "resources": {
     "media": [
-    {
-		"type": "png",
-		"name": "IMAGE_ICON",
-		"file": "img/icon.png",
-		"menuIcon": true
-	},
-    {
-		"type": "png",
-		"name": "IMAGE_BUS",
-		"file": "img/bus.png"
-	},
-    {
-		"type": "png",
-		"name": "IMAGE_CABLE",
-		"file": "img/cable.png"
-	},
-    {
-		"type": "png",
-		"name": "IMAGE_SHIP",
-		"file": "img/ship.png"
-	},
-    {
-		"type": "png",
-		"name": "IMAGE_TRAIN",
-		"file": "img/train.png"
-	},
-    {
-		"type": "png",
-		"name": "IMAGE_TRAM",
-		"file": "img/tram.png"
-	}
+      {
+        "type": "png",
+        "name": "IMAGE_ICON",
+        "file": "img/icon.png",
+        "menuIcon": true
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_BUS",
+        "file": "img/bus.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_CABLE",
+        "file": "img/cable.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_SHIP",
+        "file": "img/ship.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_TRAIN",
+        "file": "img/train.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_TRAM",
+        "file": "img/tram.png"
+      }
     ]
   }
 }
