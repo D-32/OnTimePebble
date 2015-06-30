@@ -1,9 +1,10 @@
 {
   "uuid": "506969a2-87f3-4e84-9100-bacaa6f6d237",
-  "shortName": "SBB Watch",
-  "longName": "SBB Watch",
+  "shortName": "OnTime",
+  "longName": "OnTime",
   "companyName": "Dylan Marriott",
-  "versionLabel": "1.1",
+  "versionCode": 3,
+  "versionLabel": "1.2",
   "targetPlatforms": [
     "aplite",
     "basalt"
