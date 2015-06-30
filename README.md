@@ -3,7 +3,7 @@ OnTimePebble
 
 [**Download App**](https://apps.getpebble.com/applications/53f502ee31aeb7a47e00005b)  
 
-Apple Watch version: [**AppleWatchSBB**](http://github.com/D-32/OnTime)    
+Apple Watch version: [**OnTime**](http://github.com/D-32/OnTime)    
 
 Features
 ---
